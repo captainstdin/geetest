@@ -1,0 +1,24 @@
+{
+    "name": "qqfirst/geetest",
+    "description": "geetest for php 8.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Qqfirst\\Geetest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "admin",
+            "email": "admin@qqfirst.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.3"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
