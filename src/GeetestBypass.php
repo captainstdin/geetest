@@ -1,6 +1,6 @@
 <?php
 
-namespace Qqfirst\Geetest;
+namespace Geetest;
 
 class GeetestBypass
 {

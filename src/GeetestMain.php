@@ -1,8 +1,8 @@
 <?php
 
-namespace Qqfirst\Geetest;
+namespace Geetest;
 
-use Qqfirst\Geetest\CurlCore;
+use Geetest\CurlCore;
 
 class GeetestMain
 {
