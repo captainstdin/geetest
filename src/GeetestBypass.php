@@ -16,20 +16,21 @@ class GeetestBypass
     /**
      * @param  string $gt
      * @return bool
-     * @throws \Exception
      */
-    public function check(string $gt):bool
+    public function check():bool
     {
         $res = $this->curl->set_uri('/v1/bypass_status.php')
             ->set_header(['Content-Type: application/x-www-form-urlencoded'])
-            ->set_post(['gt'=>$gt,],true)
+            ->set_post(['gt'=>$this->gt,])
             ->post('post');
 
+        if(!$res->is_error()){
+            return false;
+        }
         $array=  $res->get_body();
         if(!isset($array['status'])){
-            throw new \Exception('验证生成失败！无法确定status。');
+            return false;
         }
-
         return $array['status']=="success";
     }
 
